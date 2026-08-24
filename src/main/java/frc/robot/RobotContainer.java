@@ -34,6 +34,7 @@ import frc.robot.subsystems.vision.Vision;
 import frc.robot.subsystems.vision.VisionConstants;
 import frc.robot.subsystems.vision.VisionIO;
 import frc.robot.subsystems.vision.VisionIOLimelight;
+// === MECHANISM IMPORTS (mechanism branches insert imports here) ===
 import org.littletonrobotics.junction.networktables.LoggedDashboardChooser;
 import org.wpilib.math.geometry.Pose2d;
 import org.wpilib.math.geometry.Rotation2d;
@@ -49,6 +50,8 @@ public class RobotContainer {
   // The vision subsystem: two Limelight cameras that help the drivetrain know
   // where it is on the field (see subsystems/vision/).
   private final Vision vision;
+
+  // === MECHANISM FIELDS (mechanism branches insert fields here) ===
 
   // The driver's Xbox controller, plugged into USB port 0 in the Driver Station.
   private final CommandXboxController controller = new CommandXboxController(0);
@@ -113,6 +116,8 @@ public class RobotContainer {
               new VisionIOLimelight(VisionConstants.camera0Name, drive::getRotation),
               new VisionIOLimelight(VisionConstants.camera1Name, drive::getRotation));
     }
+
+    // === MECHANISM SETUP (mechanism branches insert subsystem creation here) ===
 
     // ---- 2. Autonomous chooser (Choreo) ----
     // AutoFactory ties Choreo trajectories to the drivetrain: it reads the pose,
@@ -190,6 +195,8 @@ public class RobotContainer {
                             new Pose2d(drive.getPose().getTranslation(), Rotation2d.kZero)),
                     drive)
                 .ignoringDisable(true));
+
+    // === MECHANISM BINDINGS (mechanism branches insert operator buttons here) ===
   }
 
   /** Robot.java calls this to get the command to run during autonomous. */
