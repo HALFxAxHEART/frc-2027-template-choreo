@@ -82,3 +82,15 @@ IO-layer pattern, REAL/SIM/REPLAY).
 > The drivetrain numbers in `TunerConstants.java` are a working example from Team
 > 5090's "Stingray" robot — replace them with your own, or regenerate with CTRE
 > Tuner X.
+
+
+---
+
+## This branch: `pickplace-elevator-arm`
+
+Adds an **elevator with a pivoting arm + gripper** (2025 Reefscape-style: reach up AND out). Operator (port 1): **A/B/Y** move elevator+arm to stow/intake/score together; hold **LB** intake, **RB** eject.
+
+Everything from `main` (swerve + Limelight vision + autonomy + logging) is
+still here; this branch just adds the mechanism above. Run it in simulation
+(*WPILib: Simulate Robot Code*) and watch the `Elevator/...`
+values in AdvantageScope.
