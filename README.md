@@ -82,3 +82,15 @@ IO-layer pattern, REAL/SIM/REPLAY).
 > The drivetrain numbers in `TunerConstants.java` are a working example from Team
 > 5090's "Stingray" robot — replace them with your own, or regenerate with CTRE
 > Tuner X.
+
+
+---
+
+## This branch: `shooter-flywheel`
+
+Adds a **flywheel shooter** (2024 Crescendo-style). Operator controller (USB port 1): hold **Right Bumper** to spin up to 3000 RPM; release to stop.
+
+Everything from `main` (swerve + Limelight vision + autonomy + logging) is
+still here; this branch just adds the mechanism above. Run it in simulation
+(*WPILib: Simulate Robot Code*) and watch the `Shooter/...`
+values in AdvantageScope.
